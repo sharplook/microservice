@@ -17,10 +17,6 @@
 
 package org.quartz.job;
 
-import org.quartz.Job;
-import org.quartz.job.impl.JobDetailImpl;
-import org.quartz.utils.Key;
-
 public class JobBuilder {
 
     private JobKey key;

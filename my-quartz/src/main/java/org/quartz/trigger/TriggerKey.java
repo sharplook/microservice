@@ -17,9 +17,6 @@
 
 package org.quartz.trigger;
 
-import org.quartz.Trigger;
-import org.quartz.utils.Key;
-
 
 public final class TriggerKey extends Key<TriggerKey> {
   

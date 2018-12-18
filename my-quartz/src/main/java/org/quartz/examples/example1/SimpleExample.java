@@ -1,22 +1,14 @@
 package org.quartz.examples.example1;
 
 
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerFactory;
-import org.quartz.Trigger;
-import org.quartz.impl.StdSchedulerFactory;
-import org.quartz.job.JobDetail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
-import static org.quartz.DateBuilder.evenMinuteDate;
-import static org.quartz.JobBuilder.newJob;
-import static org.quartz.TriggerBuilder.newTrigger;
 import static org.quartz.job.JobBuilder.newJob;
 import static org.quartz.trigger.TriggerBuilder.newTrigger;
+import static org.quartz.utils.DateBuilder.evenMinuteDate;
 
 /**
  * This Example will demonstrate how to start and shutdown the Quartz scheduler and how to schedule a job to run in

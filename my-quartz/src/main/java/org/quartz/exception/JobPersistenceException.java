@@ -16,52 +16,44 @@
  * 
  */
 
-package org.quartz;
-
-import java.util.Collection;
+package org.quartz.exception;
 
 /**
- * Provides a mechanism for obtaining client-usable handles to <code>Scheduler</code>
- * instances.
- * 
- * @see Scheduler
- * @see org.quartz.impl.StdSchedulerFactory
+ * An exception that is thrown to indicate that there has been a failure in the
+ * scheduler's underlying persistence mechanism.
  * 
  * @author James House
  */
-public interface SchedulerFactory {
+public class JobPersistenceException extends SchedulerException {
+  
+    private static final long serialVersionUID = -8924958757341995694L;
 
     /*
      * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      * 
-     * Interface.
+     * Constructors.
      * 
      * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      */
 
     /**
      * <p>
-     * Returns a client-usable handle to a <code>Scheduler</code>.
+     * Create a <code>JobPersistenceException</code> with the given message.
      * </p>
-     * 
-     * @throws SchedulerException
-     *           if there is a problem with the underlying <code>Scheduler</code>.
      */
-    Scheduler getScheduler() throws SchedulerException;
+    public JobPersistenceException(String msg) {
+        super(msg);
+    }
+
 
     /**
      * <p>
-     * Returns a handle to the Scheduler with the given name, if it exists.
+     * Create a <code>JobPersistenceException</code> with the given message
+     * and cause.
      * </p>
      */
-    Scheduler getScheduler(String schedName) throws SchedulerException;
-
-    /**
-     * <p>
-     * Returns handles to all known Schedulers (made by any SchedulerFactory
-     * within this jvm.).
-     * </p>
-     */
-    Collection<Scheduler> getAllSchedulers() throws SchedulerException;
+    public JobPersistenceException(String msg, Throwable cause) {
+        super(msg, cause);
+    }
 
 }

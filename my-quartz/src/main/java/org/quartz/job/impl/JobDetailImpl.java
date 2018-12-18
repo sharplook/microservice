@@ -1,15 +1,6 @@
 
 package org.quartz.job.impl;
 
-import org.quartz.*;
-import org.quartz.annotation.DisallowConcurrentExecution;
-import org.quartz.annotation.PersistJobDataAfterExecution;
-import org.quartz.job.JobBuilder;
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobDetail;
-import org.quartz.job.JobKey;
-import org.quartz.utils.ClassUtils;
-
 public class JobDetailImpl implements Cloneable, java.io.Serializable, JobDetail {
 
     private static final long serialVersionUID = -6069784757781506897L;

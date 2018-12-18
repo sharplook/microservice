@@ -17,10 +17,6 @@
  
 package com.pratice.examples.example12;
 
-import org.quartz.Scheduler;
-import org.quartz.SchedulerFactory;
-import org.quartz.SchedulerMetaData;
-import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -17,8 +17,6 @@
 
 package org.quartz;
 
-import org.quartz.trigger.TriggerBuilder;
-
 import java.util.Calendar;
 import java.util.TimeZone;
 

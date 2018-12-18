@@ -16,9 +16,6 @@
  */
 package org.quartz.impl.matchers;
 
-import org.quartz.Matcher;
-import org.quartz.utils.Key;
-
 /**
  * An abstract base class for some types of matchers.
  *  

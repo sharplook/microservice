@@ -17,12 +17,6 @@
 
 package org.quartz.scheduler;
 
-import org.quartz.Trigger;
-import org.quartz.spi.MutableTrigger;
-import org.quartz.trigger.SimpleTrigger;
-import org.quartz.trigger.SimpleTriggerImpl;
-import org.quartz.trigger.TriggerBuilder;
-
 /**
  * <code>SimpleScheduleBuilder</code> is a {@link ScheduleBuilder} 
  * that defines strict/literal interval-based schedules for 
@@ -63,219 +57,219 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
     private long interval = 0;
     private int repeatCount = 0;
     private int misfireInstruction = SimpleTrigger.MISFIRE_INSTRUCTION_SMART_POLICY;
-    
+
     protected SimpleScheduleBuilder() {
     }
-    
+
     /**
      * Create a SimpleScheduleBuilder.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder simpleSchedule() {
         return new SimpleScheduleBuilder();
     }
-    
+
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with a 1 minute interval.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatMinutelyForever() {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInMinutes(1)
             .repeatForever();
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with an interval
      * of the given number of minutes.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatMinutelyForever(int minutes) {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInMinutes(minutes)
             .repeatForever();
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with a 1 second interval.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatSecondlyForever() {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInSeconds(1)
             .repeatForever();
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with an interval
      * of the given number of seconds.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatSecondlyForever(int seconds) {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInSeconds(seconds)
             .repeatForever();
-        
+
         return sb;
     }
-    
+
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with a 1 hour interval.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatHourlyForever() {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInHours(1)
             .repeatForever();
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat forever with an interval
      * of the given number of hours.
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatHourlyForever(int hours) {
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInHours(hours)
             .repeatForever();
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with a 1 minute interval.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatMinutelyForTotalCount(int count) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInMinutes(1)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with an interval of the given number of minutes.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatMinutelyForTotalCount(int count, int minutes) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInMinutes(minutes)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
-    
+
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with a 1 second interval.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatSecondlyForTotalCount(int count) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInSeconds(1)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with an interval of the given number of seconds.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatSecondlyForTotalCount(int count, int seconds) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInSeconds(seconds)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
-    
+
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with a 1 hour interval.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatHourlyForTotalCount(int count) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInHours(1)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
 
     /**
      * Create a SimpleScheduleBuilder set to repeat the given number
      * of times - 1  with an interval of the given number of hours.
-     * 
+     *
      * <p>Note: Total count = 1 (at start time) + repeat count</p>
-     * 
+     *
      * @return the new SimpleScheduleBuilder
      */
     public static SimpleScheduleBuilder repeatHourlyForTotalCount(int count, int hours) {
         if(count < 1)
             throw new IllegalArgumentException("Total count of firings must be at least one! Given count: " + count);
-        
+
         SimpleScheduleBuilder sb = simpleSchedule()
             .withIntervalInHours(hours)
             .withRepeatCount(count - 1);
-        
+
         return sb;
     }
-    
+
     /**
      * Build the actual Trigger -- NOT intended to be invoked by end users,
-     * but will rather be invoked by a TriggerBuilder which this 
+     * but will rather be invoked by a TriggerBuilder which this
      * ScheduleBuilder is given to.
-     * 
+     *
      * @see TriggerBuilder#withSchedule(ScheduleBuilder)
      */
     @Override
@@ -285,13 +279,13 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         st.setRepeatInterval(interval);
         st.setRepeatCount(repeatCount);
         st.setMisfireInstruction(misfireInstruction);
-        
+
         return st;
     }
 
     /**
-     * Specify a repeat interval in milliseconds. 
-     * 
+     * Specify a repeat interval in milliseconds.
+     *
      * @param intervalInMillis the number of seconds at which the trigger should repeat.
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatInterval()
@@ -301,11 +295,11 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         this.interval = intervalInMillis;
         return this;
     }
-    
+
     /**
      * Specify a repeat interval in seconds - which will then be multiplied
-     * by 1000 to produce milliseconds. 
-     * 
+     * by 1000 to produce milliseconds.
+     *
      * @param intervalInSeconds the number of seconds at which the trigger should repeat.
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatInterval()
@@ -315,11 +309,11 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         this.interval = intervalInSeconds * 1000L;
         return this;
     }
-    
+
     /**
      * Specify a repeat interval in minutes - which will then be multiplied
-     * by 60 * 1000 to produce milliseconds. 
-     * 
+     * by 60 * 1000 to produce milliseconds.
+     *
      * @param intervalInMinutes the number of seconds at which the trigger should repeat.
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatInterval()
@@ -332,8 +326,8 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
 
     /**
      * Specify a repeat interval in minutes - which will then be multiplied
-     * by 60 * 60 * 1000 to produce milliseconds. 
-     * 
+     * by 60 * 60 * 1000 to produce milliseconds.
+     *
      * @param intervalInHours the number of seconds at which the trigger should repeat.
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatInterval()
@@ -343,11 +337,11 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         this.interval = intervalInHours * DateBuilder.MILLISECONDS_IN_HOUR;
         return this;
     }
-    
+
     /**
-     * Specify a the number of time the trigger will repeat - total number of 
-     * firings will be this number + 1. 
-     * 
+     * Specify a the number of time the trigger will repeat - total number of
+     * firings will be this number + 1.
+     *
      * @param triggerRepeatCount the number of seconds at which the trigger should repeat.
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatCount()
@@ -357,10 +351,10 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         this.repeatCount = triggerRepeatCount;
         return this;
     }
-    
+
     /**
-     * Specify that the trigger will repeat indefinitely. 
-     * 
+     * Specify that the trigger will repeat indefinitely.
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#getRepeatCount()
      * @see SimpleTrigger#REPEAT_INDEFINITELY
@@ -375,9 +369,9 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
     }
 
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link Trigger#MISFIRE_INSTRUCTION_IGNORE_MISFIRE_POLICY} instruction.
-     * 
+     *
      * @return the updated CronScheduleBuilder
      * @see Trigger#MISFIRE_INSTRUCTION_IGNORE_MISFIRE_POLICY
      */
@@ -387,22 +381,22 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
     }
 
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link SimpleTrigger#MISFIRE_INSTRUCTION_FIRE_NOW} instruction.
-     * 
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#MISFIRE_INSTRUCTION_FIRE_NOW
      */
-    
+
     public SimpleScheduleBuilder withMisfireHandlingInstructionFireNow() {
         misfireInstruction = SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW;
         return this;
     }
 
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_EXISTING_COUNT} instruction.
-     * 
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_EXISTING_COUNT
      */
@@ -410,11 +404,11 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         misfireInstruction = SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_EXISTING_COUNT;
         return this;
     }
-    
+
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT} instruction.
-     * 
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NEXT_WITH_REMAINING_COUNT
      */
@@ -424,9 +418,9 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
     }
 
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_EXISTING_REPEAT_COUNT} instruction.
-     * 
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_EXISTING_REPEAT_COUNT
      */
@@ -434,11 +428,11 @@ public class SimpleScheduleBuilder extends ScheduleBuilder<SimpleTrigger> {
         misfireInstruction = SimpleTrigger.MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_EXISTING_REPEAT_COUNT;
         return this;
     }
-    
+
     /**
-     * If the Trigger misfires, use the 
+     * If the Trigger misfires, use the
      * {@link SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_REMAINING_REPEAT_COUNT} instruction.
-     * 
+     *
      * @return the updated SimpleScheduleBuilder
      * @see SimpleTrigger#MISFIRE_INSTRUCTION_RESCHEDULE_NOW_WITH_REMAINING_REPEAT_COUNT
      */

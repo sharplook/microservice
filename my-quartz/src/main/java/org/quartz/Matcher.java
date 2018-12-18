@@ -17,8 +17,6 @@
 
 package org.quartz;
 
-import org.quartz.utils.Key;
-
 import java.io.Serializable;
 
 public interface Matcher<T extends Key<?>> extends Serializable {

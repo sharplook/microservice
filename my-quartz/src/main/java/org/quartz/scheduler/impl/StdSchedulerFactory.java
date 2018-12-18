@@ -17,23 +17,6 @@
 
 package org.quartz.scheduler.impl;
 
-import org.quartz.*;
-import org.quartz.core.JobRunShellFactory;
-import org.quartz.core.QuartzScheduler;
-import org.quartz.core.QuartzSchedulerResources;
-import org.quartz.ee.jta.JTAAnnotationAwareJobRunShellFactory;
-import org.quartz.ee.jta.JTAJobRunShellFactory;
-import org.quartz.ee.jta.UserTransactionHelper;
-import org.quartz.exception.SchedulerConfigException;
-import org.quartz.exception.SchedulerException;
-import org.quartz.impl.jdbcjobstore.JobStoreSupport;
-import org.quartz.impl.jdbcjobstore.Semaphore;
-import org.quartz.impl.jdbcjobstore.TablePrefixAware;
-import org.quartz.impl.matchers.EverythingMatcher;
-import org.quartz.simpl.RAMJobStore;
-import org.quartz.simpl.SimpleThreadPool;
-import org.quartz.spi.*;
-import org.quartz.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

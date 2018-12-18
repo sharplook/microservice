@@ -18,8 +18,6 @@
 
 package org.quartz;
 
-import org.quartz.exception.JobExecutionException;
-
 public interface JobListener {
 
 

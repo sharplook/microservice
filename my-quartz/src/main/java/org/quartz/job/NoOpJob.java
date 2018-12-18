@@ -17,10 +17,6 @@
 
 package org.quartz.job;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.exception.JobExecutionException;
-
 /**
  *
  * 没有任何操作的job , 只用来执行 TriggerListener

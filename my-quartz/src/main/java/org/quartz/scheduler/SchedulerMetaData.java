@@ -18,9 +18,6 @@
 
 package org.quartz.scheduler;
 
-import org.quartz.Scheduler;
-import org.quartz.exception.SchedulerException;
-
 import java.util.Date;
 
 /**

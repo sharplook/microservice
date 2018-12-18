@@ -1,16 +1,6 @@
 package org.quartz.trigger;
 
-import org.quartz.Calendar;
-import org.quartz.JobExecutionContext;
-import org.quartz.Scheduler;
-import org.quartz.Trigger;
-import org.quartz.exception.SchedulerException;
-import org.quartz.scheduler.ScheduleBuilder;
-import org.quartz.scheduler.SimpleScheduleBuilder;
-
 import java.util.Date;
-
-import static org.quartz.trigger.SimpleTrigger.*;
 
 public class SimpleTriggerImpl  extends AbstractTrigger<SimpleTrigger> implements SimpleTrigger, CoreTrigger  {
 

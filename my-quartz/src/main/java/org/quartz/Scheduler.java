@@ -18,19 +18,6 @@
 
 package org.quartz;
 
-import org.quartz.Trigger.TriggerState;
-import org.quartz.exception.SchedulerException;
-import org.quartz.exception.UnableToInterruptJobException;
-import org.quartz.impl.matchers.GroupMatcher;
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobDetail;
-import org.quartz.job.JobKey;
-import org.quartz.scheduler.SchedulerContext;
-import org.quartz.scheduler.SchedulerMetaData;
-import org.quartz.spi.JobFactory;
-import org.quartz.trigger.TriggerKey;
-import org.quartz.utils.Key;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Map;

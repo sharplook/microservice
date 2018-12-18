@@ -17,15 +17,6 @@
 
 package org.quartz.trigger;
 
-import org.quartz.Calendar;
-import org.quartz.Trigger;
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobDetail;
-import org.quartz.job.JobKey;
-import org.quartz.scheduler.ScheduleBuilder;
-import org.quartz.spi.MutableTrigger;
-import org.quartz.utils.Key;
-
 import java.util.Date;
 
 /**

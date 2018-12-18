@@ -17,9 +17,6 @@
 
 package org.quartz;
 
-import org.quartz.job.JobKey;
-import org.quartz.trigger.TriggerKey;
-
 import java.util.List;
 
 public interface ListenerManager {

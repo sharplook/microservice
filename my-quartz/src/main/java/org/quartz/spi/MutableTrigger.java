@@ -17,11 +17,6 @@
 
 package org.quartz.spi;
 
-import org.quartz.*;
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobKey;
-import org.quartz.trigger.TriggerKey;
-
 import java.util.Date;
 
 public interface MutableTrigger extends Trigger {

@@ -18,13 +18,6 @@
 
 package org.quartz;
 
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobDetail;
-import org.quartz.job.JobKey;
-import org.quartz.scheduler.ScheduleBuilder;
-import org.quartz.trigger.TriggerBuilder;
-import org.quartz.trigger.TriggerKey;
-
 import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Date;

@@ -17,9 +17,6 @@
  
 package org.quartz.examples.example1;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.exception.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

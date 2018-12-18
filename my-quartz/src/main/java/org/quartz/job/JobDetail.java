@@ -17,13 +17,6 @@
 
 package org.quartz.job;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.Scheduler;
-import org.quartz.Trigger;
-import org.quartz.annotation.DisallowConcurrentExecution;
-import org.quartz.annotation.PersistJobDataAfterExecution;
-
 import java.io.Serializable;
 
 /**

@@ -1,10 +1,5 @@
 package org.quartz.trigger;
 
-import org.quartz.Calendar;
-import org.quartz.Scheduler;
-import org.quartz.Trigger;
-import org.quartz.scheduler.SimpleScheduleBuilder;
-
 /**
  * A <code>{@link Trigger}</code> that is used to fire a <code>Job</code>
  * at a given moment in time, and optionally repeated at a specified interval.

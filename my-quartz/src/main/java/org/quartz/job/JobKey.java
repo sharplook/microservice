@@ -17,8 +17,6 @@
 
 package org.quartz.job;
 
-import org.quartz.utils.Key;
-
 public final class JobKey extends Key<JobKey> {
 
     private static final long serialVersionUID = -6073883950062574010L;

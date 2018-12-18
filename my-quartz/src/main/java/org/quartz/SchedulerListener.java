@@ -18,11 +18,6 @@
 
 package org.quartz;
 
-import org.quartz.exception.SchedulerException;
-import org.quartz.job.JobDetail;
-import org.quartz.job.JobKey;
-import org.quartz.trigger.TriggerKey;
-
 public interface SchedulerListener {
     void jobScheduled(Trigger trigger);
     void jobUnscheduled(TriggerKey triggerKey);

@@ -17,9 +17,6 @@
 
 package org.quartz.spi;
 
-import org.quartz.Calendar;
-import org.quartz.job.JobDetail;
-
 import java.util.Date;
 
 /**

@@ -18,8 +18,6 @@
 
 package org.quartz;
 
-import org.quartz.Trigger.CompletedExecutionInstruction;
-
 public interface TriggerListener {
 
     String getName();

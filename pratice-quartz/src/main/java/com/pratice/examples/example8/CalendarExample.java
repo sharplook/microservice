@@ -22,14 +22,7 @@ import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerFactory;
-import org.quartz.SchedulerMetaData;
-import org.quartz.SimpleTrigger;
 import com.pratice.examples.example2.SimpleJob;
-import org.quartz.impl.StdSchedulerFactory;
-import org.quartz.impl.calendar.AnnualCalendar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

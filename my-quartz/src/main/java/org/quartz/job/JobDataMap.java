@@ -18,11 +18,6 @@
 
 package org.quartz.job;
 
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.Trigger;
-import org.quartz.utils.StringKeyDirtyFlagMap;
-
 import java.io.Serializable;
 import java.util.Map;
 

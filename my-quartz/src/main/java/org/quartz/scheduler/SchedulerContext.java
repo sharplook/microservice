@@ -18,9 +18,6 @@
 
 package org.quartz.scheduler;
 
-import org.quartz.Scheduler;
-import org.quartz.utils.StringKeyDirtyFlagMap;
-
 import java.io.Serializable;
 import java.util.Map;
 

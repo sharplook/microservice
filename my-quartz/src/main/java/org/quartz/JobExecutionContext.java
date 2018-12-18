@@ -17,9 +17,6 @@
 
 package org.quartz;
 
-import org.quartz.job.JobDataMap;
-import org.quartz.job.JobDetail;
-
 import java.util.Date;
 
 public interface JobExecutionContext {

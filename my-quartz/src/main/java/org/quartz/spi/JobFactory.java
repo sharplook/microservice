@@ -16,10 +16,6 @@
  */
 package org.quartz.spi;
 
-import org.quartz.Job;
-import org.quartz.Scheduler;
-import org.quartz.exception.SchedulerException;
-
 
 public interface JobFactory {
 
