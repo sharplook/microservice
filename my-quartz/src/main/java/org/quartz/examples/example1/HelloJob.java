@@ -15,15 +15,15 @@
  * 
  */
  
-package com.pratice.examples.example1;
+package org.quartz.examples.example1;
 
-import java.util.Date;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.quartz.exception.JobExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Date;
 
 /**
  * <p>
@@ -58,7 +58,8 @@ public class HelloJob implements Job {
      * @throws JobExecutionException
      *             if there is an exception while executing the job.
      */
-    public void execute(JobExecutionContext context){
+    public void execute(JobExecutionContext context)
+        throws JobExecutionException {
 
         // Say Hello to the World and display the date/time
         _log.info("Hello World! - " + new Date());

@@ -13,7 +13,8 @@
 
 	<modules>
 		<module>pratice-quartz</module>
-	</modules>
+        <module>my-quartz</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
