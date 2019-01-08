@@ -18,6 +18,8 @@
 
 package org.quartz;
 
+import org.quartz.exception.JobExecutionException;
+
 public interface Job {
     //JOB实际执行发放
     void execute(JobExecutionContext context) throws JobExecutionException;

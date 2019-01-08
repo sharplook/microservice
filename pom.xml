@@ -14,6 +14,7 @@
 	<modules>
 		<module>pratice-quartz</module>
         <module>my-quartz</module>
+        <module>rabbit-mq</module>
     </modules>
 
 	<properties>

@@ -1,6 +1,11 @@
 package org.quartz.examples.example1;
 
 
+import org.quartz.Scheduler;
+import org.quartz.SchedulerFactory;
+import org.quartz.Trigger;
+import org.quartz.job.JobDetail;
+import org.quartz.scheduler.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

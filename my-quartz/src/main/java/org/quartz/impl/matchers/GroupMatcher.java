@@ -1,5 +1,9 @@
 package org.quartz.impl.matchers;
 
+import org.quartz.job.JobKey;
+import org.quartz.trigger.TriggerKey;
+import org.quartz.utils.Key;
+
 public class GroupMatcher<T extends Key<?>> extends StringMatcher<T> {
 
     private static final long serialVersionUID = -3275767650469343849L;

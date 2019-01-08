@@ -18,6 +18,13 @@
 
 package org.quartz.core;
 
+import org.quartz.JobExecutionContext;
+import org.quartz.JobListener;
+import org.quartz.exception.JobExecutionException;
+import org.quartz.exception.SchedulerException;
+import org.quartz.spi.JobFactory;
+import org.quartz.spi.OperableTrigger;
+import org.quartz.spi.ThreadExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +37,6 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
-import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
