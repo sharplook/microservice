@@ -53,7 +53,7 @@ public class RetryCache implements RabbitTemplate.ConfirmCallback {
 
     public <T> String add(T message, CommunicationMode mode, ConfirmBack<T> confirmBack) {
         String messageId = generateId();
-        MessageBean<T> bean = new MessageBean<T>();
+        MessageBean<T> bean = new MessageBean();
         bean.setTime(System.currentTimeMillis());
         bean.setMessage(message);
         bean.setMode(mode);

@@ -15,6 +15,7 @@
 		<module>pratice-quartz</module>
         <module>my-quartz</module>
         <module>rabbit-mq</module>
+        <module>mybatis-pro</module>
     </modules>
 
 	<properties>
