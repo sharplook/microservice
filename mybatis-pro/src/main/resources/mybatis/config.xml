@@ -16,6 +16,13 @@
         <typeAlias alias="Mail" type="com.pratice.dto.Mail"/>
     </typeAliases>
 
+    <plugins>
+        <plugin interceptor="com.pratice.plulgins.MyFirstPlugins">
+            <property name="username" value="zhangsan"></property>
+            <property name="password" value="paswd123"></property>
+        </plugin>
+    </plugins>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -27,6 +34,7 @@
             </dataSource>
         </environment>
     </environments>
+
 
     <mappers>
         <mapper resource="mybatis/mail.xml"/>
